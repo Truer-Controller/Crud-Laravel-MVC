@@ -20,3 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ProdutoController::class, 'index'])->name('indexproduto');
 
 Route::post('/produto/store', [ProdutoController::class, 'store'])->name('storeproduto');
+
+Route::get('/ver-produto/{id}',[ProdutoController::class, 'show'])->name('viewproduto');
+
+Route::get('/editar-produto/{id}',[ProdutoController::class, 'edit'])->name('editarproduto');
+
+Route::post('/editar-produto/{id}', [ProdutoController::class, 'update'])->name('editarproduto');
+
+Route::get('/excluir-produto/{id}', [ProdutoController::class, 'destroy'])->name('excluirproduto');
